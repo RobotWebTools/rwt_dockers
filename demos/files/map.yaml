@@ -1,4 +1,4 @@
-image: map.pgm
+image: /home/ros/map.pgm
 resolution: 0.050000
 origin: [-40.784036, -74.067664, 0.]
 negate: 0

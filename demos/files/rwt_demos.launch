@@ -19,6 +19,7 @@
   <arg name="port" default="9090"/>
   <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
     <arg name="port" value="$(arg port)"/>
+    <arg name="binary_encoder" value="bson"/>
   </include>
 
   <node name="viz_markers" pkg="visualization_marker_tutorials" type="basic_shapes"/>
