@@ -15,6 +15,12 @@ RUN adduser ros root
 RUN cd /tmp; wget https://raw.githubusercontent.com/jihoonl/rwt_dockers/master/demos/files/rwt_demos.launch
 RUN mv /tmp/rwt_demos.launch /home/ros/
 
+# Install map
+RUN cd /tmp; wget https://raw.githubusercontent.com/jihoonl/rwt_dockers/master/demos/files/map.yaml
+RUN mv /tmp/map.yaml /home/ros/
+RUN cd /tmp; wget https://raw.githubusercontent.com/jihoonl/rwt_dockers/master/demos/files/map.pgm
+RUN mv /tmp/map.pgm /home/ros/
+
 # Install turtlebot webview start script
 RUN cd /tmp; wget https://raw.githubusercontent.com/jihoonl/rwt_dockers/master/demos/files/start.sh
 RUN mv /tmp/start.sh /home/ros/

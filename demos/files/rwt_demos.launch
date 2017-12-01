@@ -25,8 +25,8 @@
     <remap from="target_frame" to="/rotating_frame"/>
   </node>
 
+  <node name="map_server" pkg="map_server" type="map_server" args="map.yaml"/>
+
   <node name="tf2_web_republisher" pkg="tf2_web_republisher" type="tf2_web_republisher"/>
-
-
 
 </launch>
