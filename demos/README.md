@@ -12,12 +12,13 @@
 
 * Starts Docker Container. Rsbridge port will be exposed as localhost:8888
 ```
- > sudo docker.io run -d -p 8888:9090 jihoonl/turtlebot-web-view
+ > sudo docker.io run -d -p 8888:9090 robotwebtools/demos
 ```
 
-* Open demo page.
+* Open demo page. (Turtlebot2 URDF, Marker, Interactive Marker demo are supported)
 
 <img src="turtlebot_webview.png" alt="alt text" width=400px></img>
+
 
 ## Customise 
 
