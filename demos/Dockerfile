@@ -12,17 +12,17 @@ RUN useradd -m ros
 RUN adduser ros root
 
 # Install map
-RUN cd /tmp; wget https://raw.githubusercontent.com/jihoonl/rwt_dockers/master/demos/files/map.yaml
+RUN cd /tmp; wget https://raw.githubusercontent.com/RobotWebTools/rwt_dockers/master/demos/files/map.yaml
 RUN mv /tmp/map.yaml /home/ros/
-RUN cd /tmp; wget https://raw.githubusercontent.com/jihoonl/rwt_dockers/master/demos/files/map.pgm
+RUN cd /tmp; wget https://raw.githubusercontent.com/RobotWebTools/rwt_dockers/master/demos/files/map.pgm
 RUN mv /tmp/map.pgm /home/ros/
 
 # Install turtlebot webview launcher
-RUN cd /tmp; wget https://raw.githubusercontent.com/jihoonl/rwt_dockers/master/demos/files/rwt_demos.launch
+RUN cd /tmp; wget https://raw.githubusercontent.com/RobotWebTools/rwt_dockers/master/demos/files/rwt_demos.launch
 RUN mv /tmp/rwt_demos.launch /home/ros/
 
 # Install turtlebot webview start script
-RUN cd /tmp; wget https://raw.githubusercontent.com/jihoonl/rwt_dockers/master/demos/files/start.sh
+RUN cd /tmp; wget https://raw.githubusercontent.com/RobotWebTools/rwt_dockers/master/demos/files/start.sh
 RUN mv /tmp/start.sh /home/ros/
 RUN chmod +x /home/ros/start.sh
 
