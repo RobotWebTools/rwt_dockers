@@ -1,7 +1,10 @@
 <launch>
+  <arg name="map"        default="/home/ros/map.yaml"/>
+
   <arg name="base"       value="$(optenv TURTLEBOT_BASE kobuki)"/>  <!-- create, rhoomba -->
   <arg name="stacks"     value="$(optenv TURTLEBOT_STACKS hexagons)"/>  <!-- circles, hexagons -->
   <arg name="3d_sensor"  value="$(optenv TURTLEBOT_3D_SENSOR kinect)"/>  <!-- kinect, asus_xtion_pro -->
+
 
   <include file="$(find turtlebot_bringup)/launch/includes/robot.launch.xml">
     <arg name="base" value="$(arg base)" />
@@ -25,7 +28,7 @@
     <remap from="target_frame" to="/rotating_frame"/>
   </node>
 
-  <node name="map_server" pkg="map_server" type="map_server" args="map.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
 
   <node name="tf2_web_republisher" pkg="tf2_web_republisher" type="tf2_web_republisher"/>
 
